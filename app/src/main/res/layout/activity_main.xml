@@ -1,18 +1,266 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@android:color/white"
+    android:padding="50px"
+    android:orientation="vertical">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/tvExpression"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textColor="@color/warna_tv1"
+        android:layout_gravity="end"
+        android:ellipsize="start"
+        android:singleLine="true"
+        android:textSize="40sp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="match_parent"
+        android:layout_height="260px"
+        android:textColor="@color/warna_tv2"
+        android:layout_gravity="end"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textSize="30sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_tandaroot"
+                style="@style/tv_btn_tanda"
+                android:textColor="@android:color/black"
+                android:background="@drawable/rounded"
+                android:text="root"/>
+
+            <TextView
+                android:id="@+id/tv_tandasqrt"
+                style="@style/tv_btn_tanda"
+                android:textColor="@android:color/black"
+                android:background="@drawable/rounded"
+                android:text="sqrt"/>
+
+            <TextView
+                android:id="@+id/tv_tandaf"
+                style="@style/tv_btn_tanda"
+                android:textColor="@android:color/black"
+                android:background="@drawable/rounded"
+                android:text="floor"/>
+
+            <TextView
+                android:id="@+id/tv_tandace"
+                style="@style/tv_btn_tanda"
+                android:textColor="@android:color/black"
+                android:background="@drawable/rounded"
+                android:text="ceiling"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_tandac"
+                style="@style/NumberButtonStyle"
+                android:background="@drawable/rounded"
+                android:textColor="@android:color/black"
+                android:text="C"/>
+
+            <TextView
+                android:id="@+id/tv_tandaac"
+                style="@style/NumberButtonStyle"
+                android:background="@drawable/rounded"
+                android:textColor="@android:color/black"
+                android:text="AC"/>
+
+            <TextView
+                android:id="@+id/tv_tandard"
+                style="@style/NumberButtonStyle"
+                android:background="@drawable/rounded"
+                android:textColor="@android:color/black"
+                android:text="round"/>
+
+            <TextView
+                android:id="@+id/tv_tandaplus"
+                style="@style/tv_btn_tanda"
+                android:background="@drawable/rounded"
+                android:textColor="@android:color/black"
+                android:text="+"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_angka7"
+                style="@style/NumberButtonStyle"
+                android:background="@drawable/rounded_angka"
+                android:textColor="@android:color/black"
+                android:text="7"/>
+
+            <TextView
+                android:id="@+id/tv_angka8"
+                style="@style/NumberButtonStyle"
+                android:background="@drawable/rounded_angka"
+                android:textColor="@android:color/black"
+                android:text="8"/>
+
+            <TextView
+                android:id="@+id/tv_angka9"
+                style="@style/NumberButtonStyle"
+                android:background="@drawable/rounded_angka"
+                android:textColor="@android:color/black"
+                android:text="9"/>
+
+            <TextView
+                android:id="@+id/tv_tandamin"
+                style="@style/tv_btn_tanda"
+                android:background="@drawable/rounded"
+                android:textColor="@android:color/black"
+                android:text="-"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_angka4"
+                style="@style/NumberButtonStyle"
+                android:background="@drawable/rounded_angka"
+                android:textColor="@android:color/black"
+                android:text="4"/>
+
+            <TextView
+                android:id="@+id/tv_angka5"
+                style="@style/NumberButtonStyle"
+                android:background="@drawable/rounded_angka"
+                android:textColor="@android:color/black"
+                android:text="5"/>
+
+            <TextView
+                android:id="@+id/tv_angka6"
+                style="@style/NumberButtonStyle"
+                android:background="@drawable/rounded_angka"
+                android:textColor="@android:color/black"
+                android:text="6"/>
+
+            <TextView
+                android:id="@+id/tv_tandakali"
+                style="@style/tv_btn_tanda"
+                android:background="@drawable/rounded"
+                android:textColor="@android:color/black"
+                android:text="x"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_angka1"
+                style="@style/NumberButtonStyle"
+                android:background="@drawable/rounded_angka"
+                android:textColor="@android:color/black"
+                android:text="1"/>
+
+            <TextView
+                android:id="@+id/tv_angka2"
+                style="@style/NumberButtonStyle"
+                android:background="@drawable/rounded_angka"
+                android:textColor="@android:color/black"
+                android:text="2"/>
+
+            <TextView
+                android:id="@+id/tv_angka3"
+                style="@style/NumberButtonStyle"
+                android:background="@drawable/rounded_angka"
+                android:textColor="@android:color/black"
+                android:text="3"/>
+
+            <TextView
+                android:id="@+id/tv_tandabagi"
+                style="@style/tv_btn_tanda"
+                android:background="@drawable/rounded"
+                android:textColor="@android:color/black"
+                android:text="/"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_tandadot"
+                    style="@style/NumberButtonStyle"
+                    android:background="@drawable/rounded_angka"
+                    android:textColor="@android:color/black"
+                    android:text="."/>
+
+                <TextView
+                    android:id="@+id/tv_angka0"
+                    style="@style/NumberButtonStyle"
+                    android:background="@drawable/rounded_angka"
+                    android:textColor="@android:color/black"
+                    android:text="0"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_tandasd"
+                    style="@style/EqualButtonStyle"
+                    android:background="@drawable/rounded_equal"
+                    android:textColor="@android:color/black"
+                    android:text="="/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
+    <color name="warna_tv1">#000000</color>
+    <color name ="warna_tv2">#ffffff</color>
+    <color name="warna_tombol">#cccccc</color>
+    <color name="warna_tombol2">#FF4081</color>
+    <color name = "warna_tombol3">#808080</color>
+    <color name = "warna_sd">#FF0000</color>
+    <color name="warna_">#000000</color>
+    <color name = "warna_2">#373737</color>
+    <color name = "warna_kuning">#fad643</color>
+    <color name = "warna_kuningtua">#926c15</color>
 </resources>
