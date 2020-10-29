@@ -5,8 +5,6 @@ import kotlinx.android.synthetic.main.activity_main.*
 import net.objecthunter.exp4j.ExpressionBuilder
 
 
-
-
 class MainActivity : AppCompatActivity()
 {
 
@@ -15,108 +13,108 @@ class MainActivity : AppCompatActivity()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
         /*Number Buttons*/
 
-        tvOne.setOnClickListener {
-            evaluateExpression("1", clear = true)
+        tv_angka1.setOnClickListener {
+            hitung_expression("1", clear = true)
         }
 
-        tvTwo.setOnClickListener {
-            evaluateExpression("2", clear = true)
+        tv_angka2.setOnClickListener {
+            hitung_expression("2", clear = true)
         }
 
-        tvThree.setOnClickListener {
-            evaluateExpression("3", clear = true)
+        tv_angka3.setOnClickListener {
+            hitung_expression("3", clear = true)
         }
-        tvFour.setOnClickListener {
-            evaluateExpression("4", clear = true)
-        }
-
-        tvFive.setOnClickListener {
-            evaluateExpression("5", clear = true)
+        tv_angka4.setOnClickListener {
+            hitung_expression("4", clear = true)
         }
 
-        tvSix.setOnClickListener {
-            evaluateExpression("6", clear = true)
+        tv_angka5.setOnClickListener {
+            hitung_expression("5", clear = true)
         }
 
-        tvSeven.setOnClickListener {
-            evaluateExpression("7", clear = true)
+        tv_angka6.setOnClickListener {
+            hitung_expression("6", clear = true)
         }
 
-        tvEight.setOnClickListener {
-            evaluateExpression("8", clear = true)
+        tv_angka7.setOnClickListener {
+            hitung_expression("7", clear = true)
         }
 
-        tvNine.setOnClickListener {
-            evaluateExpression("9", clear = true)
+        tv_angka8.setOnClickListener {
+            hitung_expression("8", clear = true)
         }
 
-        tvZero.setOnClickListener {
-            evaluateExpression("0", clear = true)
+        tv_angka9.setOnClickListener {
+            hitung_expression("9", clear = true)
+        }
+
+        tv_angka0.setOnClickListener {
+            hitung_expression("0", clear = true)
         }
 
         /*Operators*/
 
-        tvPlus.setOnClickListener {
-            evaluateExpression("+", clear = true)
+        tv_tandaplus.setOnClickListener {
+            hitung_expression("+", clear = true)
         }
 
-        tvMinus.setOnClickListener {
-            evaluateExpression("-", clear = true)
+        tv_tandamin.setOnClickListener {
+            hitung_expression("-", clear = true)
         }
 
-        tvMul.setOnClickListener {
-            evaluateExpression("*", clear = true)
+        tv_tandakali.setOnClickListener {
+            hitung_expression("*", clear = true)
         }
 
-        tvDivide.setOnClickListener {
-            evaluateExpression("/", clear = true)
+        tv_tandabagi.setOnClickListener {
+            hitung_expression("/", clear = true)
         }
 
-        tvDot.setOnClickListener {
-            evaluateExpression(".", clear = true)
+        tv_tandadot.setOnClickListener {
+            hitung_expression(".", clear = true)
         }
 
-        tvClear.setOnClickListener {
-            tvExpression.text = ""
-            tvResult.text = ""
+        tv_tandac.setOnClickListener {
+            tv_ketikan.text = ""
+            tv_hasil.text = ""
         }
 
-        tvEquals.setOnClickListener {
-            val text = tvExpression.text.toString()
-            val expression = ExpressionBuilder(text).build()
+        tv_tandasd.setOnClickListener {
+            val ketikan_string = tv_ketikan.text.toString()
+            val expression = ExpressionBuilder(ketikan_string).build()
 
-            val result = expression.evaluate()
-            val longResult = result.toLong()
-            if (result == longResult.toDouble()) {
-                tvResult.text = longResult.toString()
+            val hasil = expression.evaluate()
+            val hasil_long = hasil.toLong()
+            if (hasil == hasil_long.toDouble()) {
+                tv_hasil.text = hasil_long.toString()
             } else {
-                tvResult.text = result.toString()
+                tv_hasil.text = hasil.toString()
             }
         }
 
-        tvBack.setOnClickListener {
-            val text = tvExpression.text.toString()
-            if(text.isNotEmpty()) {
-                tvExpression.text = text.drop(1)
-            }
-
-            tvResult.text = ""
-        }
+//        tvBack.setOnClickListener {
+//            val text = tvExpression.text.toString()
+//            if(text.isNotEmpty()) {
+//                tvExpression.text = text.drop(1)
+//            }
+//
+//            tvResult.text = ""
+//        }
     }
 
     /*Function to calculate the expressions using expression builder library*/
 
-    fun evaluateExpression(string: String, clear: Boolean) {
+    fun hitung_expression(string: String, clear: Boolean) {
         if(clear) {
-            Result.text = ""
+            hasil.text = ""
             Expression.append(string)
-        } else {
-            Expression.append(Result.text)
+        }
+        else {
+            Expression.append(hasil.text)
             Expression.append(string)
-            Result.text = ""
+            hasil.text = ""
         }
     }
 }

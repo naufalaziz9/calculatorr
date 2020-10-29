@@ -6,11 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:background="@android:color/white"
-    android:padding="50px"
+    android:padding="47px"
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/tvExpression"
+        android:id="@+id/tv_ketikan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/warna_tv1"
@@ -20,7 +20,7 @@
         android:textSize="40sp" />
 
     <TextView
-        android:id="@+id/tvResult"
+        android:id="@+id/tv_hasil"
         android:layout_width="match_parent"
         android:layout_height="260px"
         android:textColor="@color/warna_tv2"
@@ -79,21 +79,21 @@
 
             <TextView
                 android:id="@+id/tv_tandac"
-                style="@style/NumberButtonStyle"
+                style="@style/tv_btn_tanda"
                 android:background="@drawable/rounded"
                 android:textColor="@android:color/black"
                 android:text="C"/>
 
             <TextView
                 android:id="@+id/tv_tandaac"
-                style="@style/NumberButtonStyle"
+                style="@style/tv_btn_tanda"
                 android:background="@drawable/rounded"
                 android:textColor="@android:color/black"
                 android:text="AC"/>
 
             <TextView
                 android:id="@+id/tv_tandard"
-                style="@style/NumberButtonStyle"
+                style="@style/tv_btn_tanda"
                 android:background="@drawable/rounded"
                 android:textColor="@android:color/black"
                 android:text="round"/>
@@ -116,21 +116,21 @@
 
             <TextView
                 android:id="@+id/tv_angka7"
-                style="@style/NumberButtonStyle"
+                style="@style/tv_btn_tanda"
                 android:background="@drawable/rounded_angka"
                 android:textColor="@android:color/black"
                 android:text="7"/>
 
             <TextView
                 android:id="@+id/tv_angka8"
-                style="@style/NumberButtonStyle"
+                style="@style/tv_btn_tanda"
                 android:background="@drawable/rounded_angka"
                 android:textColor="@android:color/black"
                 android:text="8"/>
 
             <TextView
                 android:id="@+id/tv_angka9"
-                style="@style/NumberButtonStyle"
+                style="@style/tv_btn_tanda"
                 android:background="@drawable/rounded_angka"
                 android:textColor="@android:color/black"
                 android:text="9"/>
@@ -152,21 +152,21 @@
 
             <TextView
                 android:id="@+id/tv_angka4"
-                style="@style/NumberButtonStyle"
+                style="@style/tv_btn_tanda"
                 android:background="@drawable/rounded_angka"
                 android:textColor="@android:color/black"
                 android:text="4"/>
 
             <TextView
                 android:id="@+id/tv_angka5"
-                style="@style/NumberButtonStyle"
+                style="@style/tv_btn_tanda"
                 android:background="@drawable/rounded_angka"
                 android:textColor="@android:color/black"
                 android:text="5"/>
 
             <TextView
                 android:id="@+id/tv_angka6"
-                style="@style/NumberButtonStyle"
+                style="@style/tv_btn_tanda"
                 android:background="@drawable/rounded_angka"
                 android:textColor="@android:color/black"
                 android:text="6"/>
@@ -188,21 +188,21 @@
 
             <TextView
                 android:id="@+id/tv_angka1"
-                style="@style/NumberButtonStyle"
+                style="@style/tv_btn_tanda"
                 android:background="@drawable/rounded_angka"
                 android:textColor="@android:color/black"
                 android:text="1"/>
 
             <TextView
                 android:id="@+id/tv_angka2"
-                style="@style/NumberButtonStyle"
+                style="@style/tv_btn_tanda"
                 android:background="@drawable/rounded_angka"
                 android:textColor="@android:color/black"
                 android:text="2"/>
 
             <TextView
                 android:id="@+id/tv_angka3"
-                style="@style/NumberButtonStyle"
+                style="@style/tv_btn_tanda"
                 android:background="@drawable/rounded_angka"
                 android:textColor="@android:color/black"
                 android:text="3"/>
@@ -230,14 +230,14 @@
 
                 <TextView
                     android:id="@+id/tv_tandadot"
-                    style="@style/NumberButtonStyle"
+                    style="@style/tv_btn_tanda"
                     android:background="@drawable/rounded_angka"
                     android:textColor="@android:color/black"
                     android:text="."/>
 
                 <TextView
                     android:id="@+id/tv_angka0"
-                    style="@style/NumberButtonStyle"
+                    style="@style/tv_btn_tanda"
                     android:background="@drawable/rounded_angka"
                     android:textColor="@android:color/black"
                     android:text="0"/>
@@ -252,7 +252,7 @@
 
                 <TextView
                     android:id="@+id/tv_tandasd"
-                    style="@style/EqualButtonStyle"
+                    style="@style/tv_btn_tanda"
                     android:background="@drawable/rounded_equal"
                     android:textColor="@android:color/black"
                     android:text="="/>
