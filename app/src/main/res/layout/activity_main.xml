@@ -5,29 +5,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@android:color/white"
-    android:padding="47px"
+    android:background="@android:color/black"
+
+    android:padding="0px"
     android:orientation="vertical">
 
     <TextView
         android:id="@+id/tv_ketikan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/warna_tv1"
+        android:textColor="@android:color/white"
         android:layout_gravity="end"
         android:ellipsize="start"
         android:singleLine="true"
-        android:textSize="40sp" />
+        android:textSize="150px" />
 
     <TextView
         android:id="@+id/tv_hasil"
         android:layout_width="match_parent"
-        android:layout_height="260px"
-        android:textColor="@color/warna_tv2"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
         android:layout_gravity="end"
         android:ellipsize="end"
         android:singleLine="true"
-        android:textSize="30sp"/>
+        android:textSize="200px"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -37,34 +38,34 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="0.5"
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/tv_tandaroot"
+                android:id="@+id/tv_tandasquare"
                 style="@style/tv_btn_tanda"
-                android:textColor="@android:color/black"
+                android:textColor="@android:color/white"
                 android:background="@drawable/rounded"
-                android:text="root"/>
+                android:text="square"/>
 
             <TextView
                 android:id="@+id/tv_tandasqrt"
                 style="@style/tv_btn_tanda"
-                android:textColor="@android:color/black"
+                android:textColor="@android:color/white"
                 android:background="@drawable/rounded"
                 android:text="sqrt"/>
 
             <TextView
                 android:id="@+id/tv_tandaf"
                 style="@style/tv_btn_tanda"
-                android:textColor="@android:color/black"
+                android:textColor="@android:color/white"
                 android:background="@drawable/rounded"
                 android:text="floor"/>
 
             <TextView
                 android:id="@+id/tv_tandace"
                 style="@style/tv_btn_tanda"
-                android:textColor="@android:color/black"
+                android:textColor="@android:color/white"
                 android:background="@drawable/rounded"
                 android:text="ceiling"/>
 
@@ -81,28 +82,28 @@
                 android:id="@+id/tv_tandac"
                 style="@style/tv_btn_tanda"
                 android:background="@drawable/rounded"
-                android:textColor="@android:color/black"
+                android:textColor="@android:color/white"
                 android:text="C"/>
 
             <TextView
                 android:id="@+id/tv_tandaac"
                 style="@style/tv_btn_tanda"
                 android:background="@drawable/rounded"
-                android:textColor="@android:color/black"
+                android:textColor="@android:color/white"
                 android:text="AC"/>
 
             <TextView
                 android:id="@+id/tv_tandard"
                 style="@style/tv_btn_tanda"
                 android:background="@drawable/rounded"
-                android:textColor="@android:color/black"
+                android:textColor="@android:color/white"
                 android:text="round"/>
 
             <TextView
                 android:id="@+id/tv_tandaplus"
                 style="@style/tv_btn_tanda"
                 android:background="@drawable/rounded"
-                android:textColor="@android:color/black"
+                android:textColor="@android:color/white"
                 android:text="+"/>
 
         </LinearLayout>
@@ -118,28 +119,28 @@
                 android:id="@+id/tv_angka7"
                 style="@style/tv_btn_tanda"
                 android:background="@drawable/rounded_angka"
-                android:textColor="@android:color/black"
+                android:textColor="@android:color/white"
                 android:text="7"/>
 
             <TextView
                 android:id="@+id/tv_angka8"
                 style="@style/tv_btn_tanda"
                 android:background="@drawable/rounded_angka"
-                android:textColor="@android:color/black"
+                android:textColor="@android:color/white"
                 android:text="8"/>
 
             <TextView
                 android:id="@+id/tv_angka9"
                 style="@style/tv_btn_tanda"
                 android:background="@drawable/rounded_angka"
-                android:textColor="@android:color/black"
+                android:textColor="@android:color/white"
                 android:text="9"/>
 
             <TextView
                 android:id="@+id/tv_tandamin"
                 style="@style/tv_btn_tanda"
                 android:background="@drawable/rounded"
-                android:textColor="@android:color/black"
+                android:textColor="@android:color/white"
                 android:text="-"/>
 
         </LinearLayout>
@@ -154,28 +155,28 @@
                 android:id="@+id/tv_angka4"
                 style="@style/tv_btn_tanda"
                 android:background="@drawable/rounded_angka"
-                android:textColor="@android:color/black"
+                android:textColor="@android:color/white"
                 android:text="4"/>
 
             <TextView
                 android:id="@+id/tv_angka5"
                 style="@style/tv_btn_tanda"
                 android:background="@drawable/rounded_angka"
-                android:textColor="@android:color/black"
+                android:textColor="@android:color/white"
                 android:text="5"/>
 
             <TextView
                 android:id="@+id/tv_angka6"
                 style="@style/tv_btn_tanda"
                 android:background="@drawable/rounded_angka"
-                android:textColor="@android:color/black"
+                android:textColor="@android:color/white"
                 android:text="6"/>
 
             <TextView
                 android:id="@+id/tv_tandakali"
                 style="@style/tv_btn_tanda"
                 android:background="@drawable/rounded"
-                android:textColor="@android:color/black"
+                android:textColor="@android:color/white"
                 android:text="x"/>
 
         </LinearLayout>
@@ -190,28 +191,28 @@
                 android:id="@+id/tv_angka1"
                 style="@style/tv_btn_tanda"
                 android:background="@drawable/rounded_angka"
-                android:textColor="@android:color/black"
+                android:textColor="@android:color/white"
                 android:text="1"/>
 
             <TextView
                 android:id="@+id/tv_angka2"
                 style="@style/tv_btn_tanda"
                 android:background="@drawable/rounded_angka"
-                android:textColor="@android:color/black"
+                android:textColor="@android:color/white"
                 android:text="2"/>
 
             <TextView
                 android:id="@+id/tv_angka3"
                 style="@style/tv_btn_tanda"
                 android:background="@drawable/rounded_angka"
-                android:textColor="@android:color/black"
+                android:textColor="@android:color/white"
                 android:text="3"/>
 
             <TextView
                 android:id="@+id/tv_tandabagi"
                 style="@style/tv_btn_tanda"
                 android:background="@drawable/rounded"
-                android:textColor="@android:color/black"
+                android:textColor="@android:color/white"
                 android:text="/"/>
 
         </LinearLayout>
@@ -232,14 +233,14 @@
                     android:id="@+id/tv_tandadot"
                     style="@style/tv_btn_tanda"
                     android:background="@drawable/rounded_angka"
-                    android:textColor="@android:color/black"
+                    android:textColor="@android:color/white"
                     android:text="."/>
 
                 <TextView
                     android:id="@+id/tv_angka0"
                     style="@style/tv_btn_tanda"
                     android:background="@drawable/rounded_angka"
-                    android:textColor="@android:color/black"
+                    android:textColor="@android:color/white"
                     android:text="0"/>
 
             </LinearLayout>
@@ -254,7 +255,7 @@
                     android:id="@+id/tv_tandasd"
                     style="@style/tv_btn_tanda"
                     android:background="@drawable/rounded_equal"
-                    android:textColor="@android:color/black"
+                    android:textColor="@android:color/white"
                     android:text="="/>
 
             </LinearLayout>

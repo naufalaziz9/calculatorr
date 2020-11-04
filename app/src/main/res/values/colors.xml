@@ -10,4 +10,5 @@
     <color name = "warna_2">#373737</color>
     <color name = "warna_kuning">#fad643</color>
     <color name = "warna_kuningtua">#926c15</color>
+    <color name="warna_bg">#151515</color>
 </resources>

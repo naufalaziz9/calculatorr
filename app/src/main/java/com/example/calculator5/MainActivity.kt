@@ -1,8 +1,11 @@
 package com.example.calculator5
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
+import net.objecthunter.exp4j.Expression
 import net.objecthunter.exp4j.ExpressionBuilder
+import kotlin.math.roundToInt
 
 
 class MainActivity : AppCompatActivity()
@@ -54,8 +57,6 @@ class MainActivity : AppCompatActivity()
             hitung_expression("0", clear = true)
         }
 
-        /*Operators*/
-
         tv_tandaplus.setOnClickListener {
             hitung_expression("+", clear = true)
         }
@@ -77,8 +78,40 @@ class MainActivity : AppCompatActivity()
         }
 
         tv_tandac.setOnClickListener {
+            tv_hasil.text = ""
+        }
+
+        tv_tandaac.setOnClickListener {
             tv_ketikan.text = ""
             tv_hasil.text = ""
+        }
+
+        tv_tandaf.setOnClickListener {
+            var buat_floor = tv_ketikan.text.toString()
+            tv_hasil.text = Math.floor(buat_floor.toDouble()).toInt().toString()
+//            tv_ketikan.text=""
+        }
+
+        tv_tandace.setOnClickListener {
+            var buat_ceiling = tv_ketikan.text.toString()
+            tv_hasil.text = Math.ceil(buat_ceiling.toDouble()).toInt().toString()
+//            tv_ketikan.text=""
+        }
+
+        tv_tandard.setOnClickListener {
+//            val buat_round = tv_ketikan
+            var buat_round = tv_ketikan.text.toString()
+            tv_hasil.text=(Math.round(buat_round.toDouble()*10.0)/10.0).toString()
+        }
+
+        tv_tandasquare.setOnClickListener {
+            var buat_square = tv_ketikan.text.toString()
+            tv_hasil.text = (buat_square.toDouble() * buat_square.toDouble()).toString()
+        }
+
+        tv_tandasqrt.setOnClickListener {
+            var buat_sqrt = tv_ketikan.text.toString()
+            tv_hasil.text = Math.sqrt(buat_sqrt.toDouble()).toInt().toString()
         }
 
         tv_tandasd.setOnClickListener {
@@ -104,17 +137,15 @@ class MainActivity : AppCompatActivity()
 //        }
     }
 
-    /*Function to calculate the expressions using expression builder library*/
-
     fun hitung_expression(string: String, clear: Boolean) {
         if(clear) {
-            hasil.text = ""
-            Expression.append(string)
+            tv_hasil.text = ""
+            tv_ketikan.append(string)
         }
         else {
-            Expression.append(hasil.text)
-            Expression.append(string)
-            hasil.text = ""
+            tv_ketikan.append(tv_hasil.text)
+            tv_ketikan.append(string)
+            tv_hasil.text = ""
         }
     }
 }
