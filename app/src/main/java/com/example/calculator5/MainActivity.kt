@@ -58,22 +58,37 @@ class MainActivity : AppCompatActivity()
         }
 
         tv_tandaplus.setOnClickListener {
-            hitung_expression("+", clear = true)
+            if ((tv_ketikan.text.toString() != "") && (tv_ketikan.text.last().toString() !in arrayOf(".", "/", "+", "-", "*"))){
+                hitung_expression("+", clear = true)
+            }
+//            hitung_expression("+", clear = true)
         }
 
         tv_tandamin.setOnClickListener {
-            hitung_expression("-", clear = true)
+            if ((tv_ketikan.text.toString() != "") && (tv_ketikan.text.last().toString() !in arrayOf(".", "/", "+", "-", "*"))){
+                hitung_expression("-", clear = true)
+            }
+//            hitung_expression("-", clear = true)
         }
 
         tv_tandakali.setOnClickListener {
-            hitung_expression("*", clear = true)
+            if ((tv_ketikan.text.toString() != "") && (tv_ketikan.text.last().toString() !in arrayOf(".", "/", "+", "-", "*"))){
+                hitung_expression("*", clear = true)
+            }
+//            hitung_expression("*", clear = true)
         }
 
         tv_tandabagi.setOnClickListener {
-            hitung_expression("/", clear = true)
+            if ((tv_ketikan.text.toString() != "") && (tv_ketikan.text.last().toString() !in arrayOf(".", "/", "+", "-", "*"))){
+                hitung_expression("/", clear = true)
+            }
+//            hitung_expression("/", clear = true)
         }
 
         tv_tandadot.setOnClickListener {
+//            if ((tv_ketikan.text.toString() != "") && (tv_ketikan.text.last().toString() !in arrayOf(".", "/", "+", "-", "*"))){
+//                hitung_expression("*", clear = true)
+//            }
             hitung_expression(".", clear = true)
         }
 
@@ -111,20 +126,36 @@ class MainActivity : AppCompatActivity()
 
         tv_tandasqrt.setOnClickListener {
             var buat_sqrt = tv_ketikan.text.toString()
-            tv_hasil.text = Math.sqrt(buat_sqrt.toDouble()).toInt().toString()
+            tv_hasil.text = Math.sqrt(buat_sqrt.toDouble()).toString()
         }
 
         tv_tandasd.setOnClickListener {
-            val ketikan_string = tv_ketikan.text.toString()
-            val expression = ExpressionBuilder(ketikan_string).build()
-
-            val hasil = expression.evaluate()
-            val hasil_long = hasil.toLong()
-            if (hasil == hasil_long.toDouble()) {
-                tv_hasil.text = hasil_long.toString()
-            } else {
-                tv_hasil.text = hasil.toString()
+//            val ketikan_string = tv_ketikan.text.toString()
+//            val expression = ExpressionBuilder(ketikan_string).build()
+//
+//            val hasil = expression.evaluate()
+//            val hasil_long = hasil.toLong()
+//            if (hasil == hasil_long.toDouble()) {
+//                tv_hasil.text = hasil_long.toString()
+//            } else {
+//                tv_hasil.text = hasil.toString()
+//            }
+            var text = tv_ketikan.text.toString()
+            if ((tv_ketikan.text.toString() != "") && (tv_ketikan.text.last().toString() in arrayOf(".", "/", "+", "-", "*"))){
+                text = tv_ketikan.text.toString().dropLast(1)
+            }else if(tv_ketikan.text.toString()==""){
+                text = "0"
             }
+            val expression = ExpressionBuilder(text).build()
+
+            val result = expression.evaluate()
+            val longResult = result.toLong()
+            if (result == longResult.toDouble()) {
+                tv_hasil.text = longResult.toString()
+            } else {
+                tv_hasil.text = result.toString()
+            }
+
         }
 
 //        tvBack.setOnClickListener {
@@ -133,7 +164,7 @@ class MainActivity : AppCompatActivity()
 //                tvExpression.text = text.drop(1)
 //            }
 //
-//            tvResult.text = ""
+//            tv_hasil.text = ""
 //        }
     }
 

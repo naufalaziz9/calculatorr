@@ -46,14 +46,14 @@
                 style="@style/tv_btn_tanda"
                 android:textColor="@android:color/white"
                 android:background="@drawable/rounded"
-                android:text="square"/>
+                android:text="^"/>
 
             <TextView
                 android:id="@+id/tv_tandasqrt"
                 style="@style/tv_btn_tanda"
                 android:textColor="@android:color/white"
                 android:background="@drawable/rounded"
-                android:text="sqrt"/>
+                android:text="√"/>
 
             <TextView
                 android:id="@+id/tv_tandaf"
